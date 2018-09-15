@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rsilveira65/rfid-tag-reader#readme",
   "dependencies": {
-    "mfrc522-rpi": "^1.1.0"
+    "mfrc522-rpi": "^1.1.0",
+    "rpi-gpio": "^1.0.0"
   }
 }
