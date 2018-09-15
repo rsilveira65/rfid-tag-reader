@@ -16,10 +16,10 @@ const run = () => {
     if (!response.status) return;
 
     const uid = response.data;
-
-    console.log("Card read UID: %s %s %s %s", uid[0].toString(16), uid[1].toString(16), uid[2].toString(16), uid[3].toString(16));
+    const uidFormated = `${uid[0].toString(16)}${uid[1].toString(16)}${uid[2].toString(16)}${uid[0].toString(16)}`
+    console.log(`UID: ${uidFormated}`);
     ledService.blink();
-    telegramService.sendMessage("Seu ID é: %s %s %s %s", uid[0].toString(16), uid[1].toString(16), uid[2].toString(16), uid[3].toString(16), false);
+    telegramService.sendMessage(`Seu ID é: ${uidFormated}, please click here to unlock the door: `, false);
 
     rfidService.stop();
 };
