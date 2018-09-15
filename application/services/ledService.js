@@ -1,8 +1,6 @@
 const gpio = require('rpi-gpio');
 var gpiop = gpio.promise;
 
-gpio.setup(7, gpio.DIR_OUT, on);
-
 const on = (err) => {
     gpiop.setup(7, gpio.DIR_OUT)
         .then(() => {
@@ -13,7 +11,7 @@ const on = (err) => {
         })
 }
 
-const off = async (err) => {
+const off = (err) => {
     gpiop.setup(7, gpio.DIR_OUT)
         .then(() => {
             return gpiop.write(7, false)
