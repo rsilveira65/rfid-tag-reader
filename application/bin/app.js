@@ -6,6 +6,8 @@ const ledService = require('../services/ledService');
 
 const run = () => {
 
+    ledService.off();
+
     let response = rfidService.scan();
 
     if (!response.status) return;
