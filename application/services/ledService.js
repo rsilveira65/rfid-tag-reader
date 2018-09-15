@@ -28,7 +28,7 @@ const blink = (err) => {
         })
         .then(() => {
             setInterval(() => {
-                return gpiop.write(7, off)
+                return gpiop.write(7, false)
             }, 500);
         })
         .catch((err) => {
