@@ -1,0 +1,22 @@
+{
+  "name": "rfid-tag-reader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsilveira65/rfid-tag-reader.git"
+  },
+  "author": "rsilveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsilveira65/rfid-tag-reader/issues"
+  },
+  "homepage": "https://github.com/rsilveira65/rfid-tag-reader#readme",
+  "dependencies": {
+    "mfrc522-rpi": "^1.1.0"
+  }
+}
