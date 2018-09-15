@@ -20,6 +20,7 @@
     "log4js": "^3.0.5",
     "messaging-api-telegram": "^0.7.6",
     "mfrc522-rpi": "^1.1.0",
-    "rpi-gpio": "^1.0.0"
+    "rpi-gpio": "^1.0.0",
+    "yamljs": "^0.3.0"
   }
 }
