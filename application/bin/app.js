@@ -19,7 +19,7 @@ const run = () => {
     const uidFormated = `${uid[0].toString(16)}${uid[1].toString(16)}${uid[2].toString(16)}${uid[0].toString(16)}`
     console.log(`UID: ${uidFormated}`);
     ledService.blink();
-    telegramService.sendMessage(`Seu ID é: ${uidFormated}, please click here to unlock the door: `, false);
+    telegramService.sendMessage(`Your ID is: ${uidFormated}, please click here to unlock the door: `, false);
 
     rfidService.stop();
 };
