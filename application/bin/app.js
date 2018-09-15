@@ -4,9 +4,7 @@
 const rfidService = require('../services/rfidService');
 
 const run = () => {
-
-    mfrc522.reset();
-
+    
     let response = rfidService.scan();
 
     if (!response.status) return;
