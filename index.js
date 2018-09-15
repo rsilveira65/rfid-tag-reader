@@ -3,4 +3,4 @@
  */
 const app = require('./application/bin/app');
 
-app.run();
+setInterval(() => {app.run()}, 500);

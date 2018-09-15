@@ -6,7 +6,7 @@ mfrc522.initWiringPi(0);
 
 console.log("scanning...");
 
-const run = setInterval(() => {
+const run = () => {
 
     mfrc522.reset();
 
@@ -28,8 +28,6 @@ const run = setInterval(() => {
 
     mfrc522.stopCrypto();
 
-}, 500);
-
-
+};
 
 module.exports = { run };
