@@ -1,23 +1,26 @@
 const gpio = require('rpi-gpio');
+var gpiop = gpio.promise;
 
-const on = async (err) => {
-    gpio.setup(7, gpio.DIR_OUT, write);
+gpio.setup(7, gpio.DIR_OUT, on);
 
-    if (err) throw err;
-    gpio.write(7, true, (err) => {
-        if (err) throw err;
-        console.log('Written to pin');
-    });
+const on = (err) => {
+    gpiop.setup(7, gpio.DIR_OUT)
+        .then(() => {
+            return gpiop.write(7, true)
+        })
+        .catch((err) => {
+            console.log('Error: ', err.toString())
+        })
 }
 
 const off = async (err) => {
-    gpio.setup(7, gpio.DIR_OUT, write);
-
-    if (err) throw err;
-    gpio.write(7, false, (err) => {
-        if (err) throw err;
-        console.log('Written to pin');
-    });
+    gpiop.setup(7, gpio.DIR_OUT)
+        .then(() => {
+            return gpiop.write(7, false)
+        })
+        .catch((err) => {
+            console.log('Error: ', err.toString())
+        })
 }
 
 module.exports = {
