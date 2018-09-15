@@ -1,33 +1,25 @@
 /**
  * Local Modules
  */
-const mfrc522 = require("mfrc522-rpi");
-mfrc522.initWiringPi(0);
-
-console.log("scanning...");
+const rfidService = require('../services/rfidService');
 
 const run = () => {
 
     mfrc522.reset();
 
-    let response = mfrc522.findCard();
+    let response = rfidService.scan();
 
-    if (!response.status) {
-        return;
-    }
+    if (!response.status) return;
+    
+    response = rfidService.read();
 
-    response = mfrc522.getUid();
-
-    if (!response.status) {
-        console.log("UID Scan Error");
-        return;
-    }
+    if (!response.status) return;
 
     const uid = response.data;
+
     console.log("Card read UID: %s %s %s %s", uid[0].toString(16), uid[1].toString(16), uid[2].toString(16), uid[3].toString(16));
 
-    mfrc522.stopCrypto();
-
+    rfidService.stop();
 };
 
 module.exports = { run };
