@@ -10,12 +10,12 @@ const scan = async => {
 
     console.log("scanning...");
 
-    return await mfrc522.findCard();
+    return mfrc522.findCard();
 };
 
-const read = async message => mfrc522.getUid();
+const read = async => mfrc522.getUid();
 
-const stop = async => await mfrc522.stopCrypto();
+const stop = async => mfrc522.stopCrypto();
 
 module.exports = {
     scan,
