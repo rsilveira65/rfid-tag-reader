@@ -10,7 +10,7 @@ const gpiop = gpio.promise;
 const configService = require('./configService');
 const logService = require('./logService');
 
-const pins = configService.getParameters()['pins'];
+const pins = await configService.getParameters()['pins'];
 
 const on = (err) => {
     gpiop.setup(pins.led, gpio.DIR_OUT)
