@@ -1,6 +1,13 @@
 /**
+ * Node Modules
+ */
+const cron = require('node-cron');
+
+/**
  * Local Modules
  */
 const app = require('./application/bin/app');
 
-setInterval(() => {app.run()}, 500);
+cron.schedule('* * * * * * *', () => {
+    app.run()
+});

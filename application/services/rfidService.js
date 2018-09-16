@@ -1,7 +1,6 @@
 /**
  * Node Modules
  */
-
 const mfrc522 = require("mfrc522-rpi");
 
 const scan = async => {
