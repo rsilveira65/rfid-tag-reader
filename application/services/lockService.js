@@ -7,19 +7,19 @@ const gpiop = gpio.promise;
 /**
  * Local Modules
  */
-const configService = require('./configService');
+const pinService = require('./pinService');
 const logService = require('./logService');
 
-const parameters = configService.getParameters();
+const pins = pinService.getPins();
 
 const unlock = (err) => {
-    gpiop.setup(parameters.lock, gpio.DIR_OUT)
+    gpiop.setup(pins.lock, gpio.DIR_OUT)
         .then(() => {
-            return gpiop.write(parameters.lock, true)
+            return gpiop.write(pins.lock, true)
         })
         .then(() => {
             setInterval(() => {
-                return gpiop.write(parameters.lock, false)
+                return gpiop.write(pins.lock, false)
             }, 1000);
         })
         .catch((err) => {

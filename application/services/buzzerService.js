@@ -7,10 +7,10 @@ const gpiop = gpio.promise;
 /**
  * Local Modules
  */
-const configService = require('./configService');
+const pinService = require('./pinService');
 const logService = require('./logService');
 
-const pins = configService.getParameters()['pins'];
+const pins = pinService.getPins();
 
 const sound = (err) => {
     gpiop.setup(pins.buzzer, gpio.DIR_OUT)
