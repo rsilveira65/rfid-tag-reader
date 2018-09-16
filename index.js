@@ -1,13 +1,6 @@
 /**
- * Node Modules
- */
-const cron = require('node-cron');
-
-/**
  * Local Modules
  */
-const app = require('./application/bin/app');
+const scheduler = require('./application/bin/scheduler');
 
-cron.schedule('* * * * * * *', () => {
-    app.run()
-});
+scheduler.run();

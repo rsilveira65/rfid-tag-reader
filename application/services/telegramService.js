@@ -7,7 +7,7 @@ const {TelegramClient} = require('messaging-api-telegram');
  * Local Modules
  */
 const configService = require('./configService');
-const logrService = require('./logService');
+const logService = require('./logService');
 
 /*
  * Sends message through Telegram API
