@@ -7,7 +7,7 @@ const {TelegramClient} = require('messaging-api-telegram');
  * Local Modules
  */
 const configService = require('./configService');
-const loggerService = require('./logService');
+const logrService = require('./logService');
 
 /*
  * Sends message through Telegram API
@@ -24,7 +24,7 @@ const sendMessage = async (message, disableNotification = true) => {
             disable_notification: disableNotification,
         });
     } catch(error) {
-        loggerService.logError(error)
+        logService.logError(error)
     }
 };
 

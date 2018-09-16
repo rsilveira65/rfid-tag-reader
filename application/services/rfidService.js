@@ -7,7 +7,7 @@ const mfrc522 = require("mfrc522-rpi");
 const scan = async => {
     mfrc522.initWiringPi(0);
     mfrc522.reset();
-    
+
     return mfrc522.findCard();
 };
 

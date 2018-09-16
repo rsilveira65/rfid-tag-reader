@@ -1,3 +1,7 @@
 name: 'yourName'
 chat_id: 32423423
 token: 'yourTelegramToken'
+
+pins:
+  - lock: 8
+  - led: 7
