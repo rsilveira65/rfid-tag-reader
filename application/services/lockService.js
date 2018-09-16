@@ -27,8 +27,4 @@ const unlock = (err) => {
         })
 }
 
-module.exports = {
-    on,
-    off,
-    blink
-};
+module.exports = { unlock };
