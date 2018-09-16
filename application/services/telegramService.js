@@ -28,6 +28,4 @@ const sendMessage = async (message, disableNotification = true) => {
     }
 };
 
-module.exports = {
-    sendMessage
-};
+module.exports = { sendMessage };
