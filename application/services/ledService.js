@@ -12,7 +12,6 @@ const logService = require('./logService');
 
 const pins = configService.getParameters()['pins'];
 
-
 const on = (err) => {
     gpiop.setup(pins.led, gpio.DIR_OUT)
         .then(() => {

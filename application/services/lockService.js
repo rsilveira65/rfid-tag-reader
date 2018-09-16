@@ -12,7 +12,6 @@ const logService = require('./logService');
 
 const pins = configService.getParameters()['pins'];
 
-
 const unlock = (err) => {
     gpiop.setup(pins.lock, gpio.DIR_OUT)
         .then(() => {

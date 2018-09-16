@@ -12,7 +12,7 @@ const logService = require('./logService');
 
 const pins = configService.getParameters()['pins'];
 
-const unlock = (err) => {
+const sound = (err) => {
     gpiop.setup(pins.buzzer, gpio.DIR_OUT)
         .then(() => {
             return gpiop.write(pins.buzzer, true)
@@ -27,8 +27,4 @@ const unlock = (err) => {
         })
 }
 
-module.exports = {
-    on,
-    off,
-    sound
-};
+module.exports = { sound };
