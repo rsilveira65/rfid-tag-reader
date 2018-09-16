@@ -7,20 +7,20 @@ const gpiop = gpio.promise;
 /**
  * Local Modules
  */
-const configService = require('./configService');
+const pinService = require('./pinService');
 const logService = require('./logService');
 
 const blink = async (err) => {
-    const parameters = await configService.getParameters();
+    const pins = await pinService.getPins();
 
-    gpiop.setup(parameters.led, gpio.DIR_OUT)
+    gpiop.setup(pins.led, gpio.DIR_OUT)
         .then(() => {
-            return gpiop.write(parameters.led, true)
+            return gpiop.write(pins.led, true)
         })
         .then(() => {
             setInterval(() => {
-                return gpiop.write(parameters.led, false)
-            }, 500);
+                return gpiop.write(pins.led, false)
+            }, 1000);
         })
         .catch((err) => {
             logService.logError(err.toString())
