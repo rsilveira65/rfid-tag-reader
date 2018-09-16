@@ -1,0 +1,3 @@
+led: 7
+lock: 8
+buzzer: 9
