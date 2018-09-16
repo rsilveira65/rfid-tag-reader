@@ -10,29 +10,9 @@ const gpiop = gpio.promise;
 const configService = require('./configService');
 const logService = require('./logService');
 
-const pins = await configService.getParameters()['pins'];
+const blink = async (err) => {
+    const pins = await configService.getParameters()['pins'];
 
-const on = (err) => {
-    gpiop.setup(pins.led, gpio.DIR_OUT)
-        .then(() => {
-            return gpiop.write(pins.led, true)
-        })
-        .catch((err) => {
-            logService.logError(err.toString())
-        })
-}
-
-const off = (err) => {
-    gpiop.setup(pins.led, gpio.DIR_OUT)
-        .then(() => {
-            return gpiop.write(pins.led, false)
-        })
-        .catch((err) => {
-            logService.logError(err.toString())
-        })
-}
-
-const blink = (err) => {
     gpiop.setup(pins.led, gpio.DIR_OUT)
         .then(() => {
             return gpiop.write(pins.led, true)
@@ -47,8 +27,4 @@ const blink = (err) => {
         })
 }
 
-module.exports = {
-    on,
-    off,
-    blink
-};
+module.exports = { blink };
