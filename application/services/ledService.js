@@ -13,13 +13,13 @@ const logService = require('./logService');
 const blink = async (err) => {
     const parameters = await configService.getParameters();
 
-    gpiop.setup(parameters.pins.led, gpio.DIR_OUT)
+    gpiop.setup(parameters.led, gpio.DIR_OUT)
         .then(() => {
-            return gpiop.write(parameters.pins.led, true)
+            return gpiop.write(parameters.led, true)
         })
         .then(() => {
             setInterval(() => {
-                return gpiop.write(parameters.pins.led, false)
+                return gpiop.write(parameters.led, false)
             }, 500);
         })
         .catch((err) => {

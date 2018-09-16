@@ -2,8 +2,6 @@ name: 'yourName'
 chat_id: 32423423
 token: 'yourTelegramToken'
 periodicity: '* * * * * * *'
-
-pins:
-  - led: 7
-  - lock: 8
-  - buzzer 9
+led: 7
+lock: 8
+buzzer 9
