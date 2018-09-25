@@ -2,7 +2,7 @@
 
 ## Raspberry Config
 
-Use the interactive menu to enable the SPI Interface.
+Use the interactive menu to enable the SPI Interface. See more:  [here](https://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/)
 
 Reboot your PI using:
 ```
