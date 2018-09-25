@@ -15,16 +15,16 @@ const pins = pinService.getPins();
 const sound = (err) => {
     gpiop.setup(pins.buzzer, gpio.DIR_OUT)
         .then(() => {
-            return gpiop.write(pins.buzzer, true)
+            return gpiop.write(pins.buzzer, true);
         })
         .then(() => {
             setInterval(() => {
-                return gpiop.write(pins.buzzer, false)
+                return gpiop.write(pins.buzzer, false);
             }, 500);
         })
         .catch((err) => {
-            logService.logError(err.toString())
+            logService.logError(err.toString());
         })
-}
+};
 
 module.exports = { sound };

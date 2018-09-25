@@ -13,7 +13,7 @@ const run = async () => {
     const parameters = await configService.getParameters();
 
     cron.schedule(parameters.periodicity, () => {
-        app.run()
+        app.run();
     });
 };
 

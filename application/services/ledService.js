@@ -15,16 +15,16 @@ const blink = async (err) => {
 
     gpiop.setup(pins.led, gpio.DIR_OUT)
         .then(() => {
-            return gpiop.write(pins.led, true)
+            return gpiop.write(pins.led, true);
         })
         .then(() => {
             setInterval(() => {
-                return gpiop.write(pins.led, false)
+                return gpiop.write(pins.led, false);
             }, 1000);
         })
         .catch((err) => {
-            logService.logError(err.toString())
+            logService.logError(err.toString());
         })
-}
+};
 
 module.exports = { blink };
