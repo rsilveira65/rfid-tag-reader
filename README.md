@@ -29,4 +29,4 @@ BUZZER --> 9
 ```
 
 
-![alt tag](https://www.element14.com/community/servlet/JiveServlet/previewBody/73950-102-12-339300/pi3_gpio.png)
+![alt tag](http://osoyoo.com/wp-content/uploads/2017/06/raspberry-pi-zero.jpg)
