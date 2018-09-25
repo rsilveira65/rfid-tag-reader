@@ -1,5 +1,47 @@
 # rfid-tag-reader
 
+## Raspberry Config
+
+Use the interactive menu to enable the SPI Interface.
+
+Reboot your PI using:
+```
+$ sudo reboot
+```
+When you login again check to see that the SPI Interface is enabled
+```
+$ sudo nano /boot/config.txt
+```
+Try to find a line that says:
+```
+dtparam=spi=on
+```
+If you see the above line then SPI is enabled
+
+Save & Reboot your PI using:
+```
+$ sudo reboot
+```
+When you login again check to see that the spi_bcm2835 module is loaded
+```
+$ lsmod | grep spi
+```
+Install python2.7-dev:
+```
+$ sudo apt-get install python2.7-dev
+```
+Download and Install SPI-Py executing the following commands:
+```
+$ git clone https://github.com/lthiery/SPI-Py.git
+```
+```
+$ cd SPI-Py
+```
+```
+$ sudo python setup.py install
+```
+
+
 ## Project Setup
 ```bash
 $ npm install
