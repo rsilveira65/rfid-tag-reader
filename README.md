@@ -49,21 +49,21 @@ $ npm install
 
 ## Hardware Setup (PIN/GPIO)
 ```
-SDA --> 24
+SDA --> 24 - YELLOW
 
-SCK --> 23
+SCK --> 23 - BLUE
 
-MOSI --> 19
+MOSI --> 19 - GREEN
 
-MISO --> 21
+MISO --> 21 - ORANGE
 
-GND --> 6
+GND --> 6 - BLACK
 
-RST --> 22
+RST --> 22 - BROWN
 
-3.3V --> 1
+3.3V --> 1 - RED
 
-LED --> 7
+LED --> 7 - WHITE
 
 LOCK --> 8
 
